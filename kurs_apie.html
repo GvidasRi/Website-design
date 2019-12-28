@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Apie įmonę</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  #crosshair {cursor: crosshair;}
+  body  {
+  font-family: Arial;
+  background-image: url("46874c.jpg");
+  background-size: 100%;
+  background-color: #cccccc;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<script>
+$(document).ready(function(){
+  $("#yeet").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "lightblue");
+    }, 
+    click: function(){
+      $(this).css("background-color", "yellow");
+    }  
+  });
+});
+</script>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gvido Rimeikio kursinis darbas: Konsultacinė įmonė.</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="kurs_main.html">Pradžia</a></li>
+      <li class="active" class="crosshair"><a href="kurs_apie.html">Apie mus</a></li>
+      <li><a href="kurs_patirtis.html">Patirtis</a></li>
+      <li><a href="kurs_kontaktai.html">Kontaktai</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h2>Apie įmonę</h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Istorija')" id="defaultOpen">Istorija</button>
+  <button id="crosshair" class="tablinks" onclick="openCity(event, 'Misija')">Misija</button>
+  <button id="crosshair" class="tablinks" onclick="openCity(event, 'Vizija')">Vizija</button>
+  <button id="crosshair" class="tablinks" onclick="openCity(event, 'Patirtis')">Patirtis</button>
+</div>
+
+<div id="Istorija" class="tabcontent">
+  <h3>Istorija</h3>
+  <p>UAB "Kauko" – tai šiuolaikinė konsultacinė įmonė, Lietuvoje sėkmingai dirbanti nuo 1997 m. Įmonė ypatingą dėmesį teikia paslaugų kokybei bei individualiam požiūriui į kiekvieną klientą.
+Pagrindinės įmonės veiklos sritys yra šios:
+<ul>
+  <li>konsultacijos verslo finansavimo galimybių, paraiškų rengimo ES Struktūriniams fondams, tarptautinėms ir nacionalinėms programoms srityse</li>
+  <li>galimybių studijų, investicinių projektų ir verslo planų rengimas</li>
+  <li>projektų valdymas ir administravimas</li>
+  <li>vadybos sistemų diegimas</li>
+  <li>tarpininkavimas perkant/parduodant verslą bei pritraukiant investuotojus.</li>
+</ul>
+
+
+
+
+UAB "Kauko" veikia transporto, švietimo, socialinių paslaugų, žmogiškųjų išteklių, informacinių technologijų, aplinkosaugos, verslo aplinkos ir turizmo sektoriuose.
+
+UAB "Kauko" paslaugas klientams teikia ne tik Lietuvoje - įmonė sėkmingai vykdo projektus taip pat ir Baltarusijoje, Ukrainoje, Gruzijoje, Moldovoje.</p>
+</div>
+
+<div id="Misija" class="tabcontent">
+  <h3>Misija</h3>
+  <p>Padėti organizacijoms augti ir kurti pridėtinę vertę, sprendžiant visas problemas, susijusias su finansavimu, investicijomis, tyrimais, plėtros galimybėmis.</p> 
+</div>
+
+<div id="Vizija" class="tabcontent">
+  <h3>Vizija</h3>
+  <p>Būti sėkmingiausia konsultavimo įmone Lietuvoje, teikiančia finansavimo pritraukimo ir susijusias paslaugas iš įvairių paramos, investicinių ir kitų fondų.</p>
+</div>
+
+<div id="Patirtis" class="tabcontent">
+  <h3>Patirtis</h3>
+  <p>Mūsų įmonė sėkmingai dirba jau 17 metų. Mes parengėme daugiau nei 200 paraiškų ES struktūrinių ir kitų tarptautinių fondų finansavimui gauti, bendras šių projektų biudžetas viršija 120 mln. eurų. Mes administravome daugiau nei 33 ES struktūrinių fondų finansavimą gavusių projektus, parengėme daugiau nei 11 investicinių projektų, daugiau nei 25 galimybių studijas, daugiau nei 7 viešinimo sutartis.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+
+</body>
+</html>
